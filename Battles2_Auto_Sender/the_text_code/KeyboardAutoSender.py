@@ -1,4 +1,4 @@
-from keyboard import read_key, press, release
+from keyboard import read_key, press_and_release, release
 from mouse import is_pressed as pressed, wait
 from time import sleep
 from pyautogui import hotkey
@@ -14,7 +14,7 @@ def keyboardAutoSend(legal_keys: list):
                 if util.getActiveWindow() == "Bloons TD Battles 2":
                     break
             if util.getActiveWindow() == "Bloons TD Battles 2":
-                press(key)
+                press_and_release(key)
                 sleep(0.05)
         release(key)
         
