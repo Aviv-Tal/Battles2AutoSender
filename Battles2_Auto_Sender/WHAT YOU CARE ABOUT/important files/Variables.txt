@@ -1,0 +1,2 @@
+PathToBattles=C:\Program Files (x86)\Steam\steamapps\common\Bloons TD Battles 2\btdb2_game.exe
+bloon sends=[a,s,d,f,g,h,j,k,l,;]
