@@ -13,9 +13,6 @@ def getSendHotKeys(file_content: list) -> list:
 def exitGame():
     hotkey("alt", "f4")
     
-def isInBattles() -> bool:
-    return getActiveWindow() == "Bloons TD Battles 2"
-    
 def getActiveWindow() -> Optional[str]:
     hWnd = windll.user32.GetForegroundWindow()
     length = windll.user32.GetWindowTextLengthW(hWnd)
