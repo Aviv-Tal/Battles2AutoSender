@@ -24,3 +24,6 @@ def getActiveWindow() -> Optional[str]:
         return buf.value
     else:
         return None
+    
+def isBattlesOpen() -> bool:
+    return getActiveWindow() == "Bloons TD Battles 2"

@@ -11,9 +11,9 @@ def keyboardAutoSend(legal_keys: list):
             continue
         while True:
             if pressed(button="right"):
-                if util.getActiveWindow() == "Bloons TD Battles 2":
+                if util.isBattlesOpen():
                     break
-            if util.getActiveWindow() == "Bloons TD Battles 2":
+            if util.isBattlesOpen():
                 press(key)
                 sleep(0.05)
         release(key)

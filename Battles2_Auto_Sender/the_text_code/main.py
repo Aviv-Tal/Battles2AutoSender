@@ -7,7 +7,7 @@ try:
     if __name__ == "__main__":
         file_content = open(util.path_to_variables, "r").readlines()
         legal_keys = util.getSendHotKeys(file_content)
-                    
+        
         openBattles(file_content)
         keyboardAutoSend(legal_keys)
             
