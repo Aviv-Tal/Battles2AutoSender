@@ -2,8 +2,8 @@ from pyautogui import hotkey
 from typing import Optional
 from ctypes import wintypes, windll, create_unicode_buffer
 
-path_to_variables = "..\\important files\\Variables.txt"
-path_to_borders = "..\\important files\\Borders.txt"
+path_to_variables = "..\\WHAT YOU CARE ABOUT\\important files\\Variables.txt"
+path_to_borders = "..\\WHAT YOU CARE ABOUT\\important files\\Borders.txt"
 
 # get the keys to send bloons from the variables file
 def getSendHotKeys(file_content: list) -> list:
