@@ -10,12 +10,13 @@ def keyboardAutoSend(legal_keys: list):
         if key not in legal_keys:
             continue
         while True:
-            if pressed(button="right"):
-                if util.isBattlesOpen():
-                    break
             if util.isBattlesOpen():
                 press(key)
                 sleep(0.05)
+                if pressed(button="right"):
+                    break
+            else:
+                release(key)
         release(key)
         
 if __name__ == "__main__":
