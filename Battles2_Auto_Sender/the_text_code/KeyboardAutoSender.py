@@ -17,6 +17,7 @@ def keyboardAutoSend(legal_keys: list):
                     break
             else:
                 release(key)
+                sleep(0.05)
         release(key)
         
 if __name__ == "__main__":
