@@ -11,6 +11,7 @@ def keyboardAutoSend(legal_keys: list):
         if key == "\\":
             press("m")
             sleep(1)
+            release("m")
             exit()
             
         if key not in legal_keys:
