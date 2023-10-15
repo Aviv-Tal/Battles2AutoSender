@@ -7,8 +7,15 @@ import Utility as util
 def keyboardAutoSend(legal_keys: list):
     while True:
         key = read_key()
+        
+        if key == "\\":
+            press("m")
+            sleep(1)
+            exit()
+            
         if key not in legal_keys:
             continue
+        
         while True:
             if util.isBattlesOpen():
                 press(key)
