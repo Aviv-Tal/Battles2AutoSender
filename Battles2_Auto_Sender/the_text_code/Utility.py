@@ -1,6 +1,7 @@
 from pyautogui import hotkey
 from typing import Optional
 from ctypes import wintypes, windll, create_unicode_buffer
+import subprocess
 
 path_to_variables = "..\\WHAT YOU CARE ABOUT\\important files\\Variables.txt"
 path_to_borders = "..\\WHAT YOU CARE ABOUT\\important files\\Borders.txt"
@@ -27,3 +28,10 @@ def getActiveWindow() -> Optional[str]:
     
 def isBattlesOpen() -> bool:
     return getActiveWindow() == "Bloons TD Battles 2"
+
+def isBattlesRunning():
+    progs = str(subprocess.check_output('tasklist'))
+    if "btdb2_game.exe" in progs:
+        return True
+    else:
+        return False

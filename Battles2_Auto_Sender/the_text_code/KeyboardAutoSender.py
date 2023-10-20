@@ -8,7 +8,7 @@ def keyboardAutoSend(legal_keys: list):
     while True:
         key = read_key()
         
-        if key == "\\":
+        if not util.isBattlesRunning():
             press("m")
             sleep(1)
             release("m")
