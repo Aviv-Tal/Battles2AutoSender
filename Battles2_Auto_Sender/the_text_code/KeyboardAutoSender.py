@@ -5,28 +5,23 @@ from pyautogui import hotkey
 import Utility as util
 
 def keyboardAutoSend(legal_keys: list):
+    key = read_key()
+
+    if key not in legal_keys:
+        return
+    
     while True:
-        key = read_key()
-        
-        if not util.isBattlesRunning():
-            press("m")
-            sleep(1)
-            release("m")
-            exit()
-            
-        if key not in legal_keys:
-            continue
-        
-        while True:
-            if util.isBattlesOpen():
-                press(key)
-                sleep(0.05)
-                if pressed(button="right"):
-                    break
-            else:
-                release(key)
-                sleep(0.05)
-        release(key)
+        if util.isBattlesOpen():
+            press(key)
+            sleep(0.05)
+            if pressed(button="right"):
+                break
+        else:
+            if not util.isBattlesRunning():
+                exit()
+            release(key)
+            sleep(0.05)
+    release(key)
         
 if __name__ == "__main__":
     f = open(util.path_to_variables, "r")
