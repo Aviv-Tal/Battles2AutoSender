@@ -1,7 +1,6 @@
 from pyautogui import hotkey
 from typing import Optional
 from ctypes import wintypes, windll, create_unicode_buffer
-import psutil
 
 path_to_variables = "..\\WHAT YOU CARE ABOUT\\important files\\Variables.txt"
 path_to_borders = "..\\WHAT YOU CARE ABOUT\\important files\\Borders.txt"
@@ -28,9 +27,3 @@ def getActiveWindow() -> Optional[str]:
     
 def isBattlesOpen() -> bool:
     return getActiveWindow() == "Bloons TD Battles 2"
-
-def isBattlesRunning() -> bool:
-    for process in psutil.process_iter(['name']):
-        if process.info['name'] == "Bloons TD Battles 2":
-            return True
-    return False
