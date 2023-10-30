@@ -32,7 +32,7 @@ def keyboardAutoSend(legal_keys: list):
             if not util.isBattlesRunning():
                 exit()
             release(key)
-            sleep(0.05)
+            sleep(0.1)
     release(key)
     
     system("cls")
